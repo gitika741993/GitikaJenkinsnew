@@ -59,6 +59,15 @@ public class Basecl {
 	    options.addArguments("--ignore-ssl-errors=yes");
 	    options.addArguments("--ignore-certificate-errors");
 	    options.setExperimentalOption("useAutomationExtension", false);
+	    options.addArguments("--disable-extensions");
+	    options.addArguments("--headless");
+	    options.addArguments("--disable-gpu");
+	    options.addArguments("--no-sandbox");
+
+	    options.addArguments("--no-sandbox");
+	    options.addArguments("--incognito");
+	    options.addArguments("--disable-application-cache");
+	    options.addArguments("--disable-dev-shm-usage");
 	  //  options.addArguments("--headless", "--window-size=1920,1200","--ignore-certificate-errors");
 	    options.addArguments("--headless");
 	    options.setAcceptInsecureCerts(true);
