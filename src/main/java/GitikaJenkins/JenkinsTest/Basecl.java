@@ -14,6 +14,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.events.EventFiringDecorator;
 import org.openqa.selenium.support.events.WebDriverListener;
 
@@ -56,6 +58,11 @@ public class Basecl {
 	    options.addArguments("--disable-dev-shm-usage");
 	    options.addArguments("--ignore-ssl-errors=yes");
 	    options.addArguments("--ignore-certificate-errors");
+	    options.setExperimentalOption("useAutomationExtension", false);
+	  //  options.addArguments("--headless", "--window-size=1920,1200","--ignore-certificate-errors");
+	    options.addArguments("--headless");
+	    options.setAcceptInsecureCerts(true);
+	    
 	    //WebDriver driver = new ChromeDriver(options);
 		String browsername = prop.getProperty("browser");
 		if(browsername.equals("chrome"))
