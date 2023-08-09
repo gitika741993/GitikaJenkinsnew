@@ -54,7 +54,7 @@ public class Basecl {
 	{    
 		ChromeOptions options = new ChromeOptions();
 		ChromeDriverManager.chromedriver().setup();
-	    options.addArguments("--remote-allow-origins=*");
+	   // options.addArguments("--remote-allow-origins=*");
 		/*
 		 * options.addArguments("--disable-dev-shm-usage");
 		 * options.addArguments("--ignore-ssl-errors=yes");
@@ -71,7 +71,7 @@ public class Basecl {
 		 * "--window-size=1920,1200","--ignore-certificate-errors");
 		 * options.addArguments("--headless");
 		 */
-	    options.setAcceptInsecureCerts(true);
+	   // options.setAcceptInsecureCerts(true);
 	    
 	    //WebDriver driver = new ChromeDriver(options);
 		String browsername = prop.getProperty("browser");
