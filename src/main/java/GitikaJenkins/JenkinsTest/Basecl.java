@@ -33,7 +33,7 @@ public class Basecl {
 		try
 		{
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream("C:\\Users\\gitika\\Downloads\\JenkinsInt-master\\JenkinsInt-master\\src\\main\\resources\\data.properties");
+			FileInputStream ip = new FileInputStream("C:\\Users\\gitika\\GitikaEclipseProject1\\JenkinsTest\\data.properties");
 			prop.load(ip);
 			
 		}
@@ -53,6 +53,9 @@ public class Basecl {
 		ChromeOptions options = new ChromeOptions();
 		ChromeDriverManager.chromedriver().setup();
 	    options.addArguments("--remote-allow-origins=*");
+	    options.addArguments("--disable-dev-shm-usage");
+	    options.addArguments("--ignore-ssl-errors=yes");
+	    options.addArguments("--ignore-certificate-errors");
 	    //WebDriver driver = new ChromeDriver(options);
 		String browsername = prop.getProperty("browser");
 		if(browsername.equals("chrome"))
