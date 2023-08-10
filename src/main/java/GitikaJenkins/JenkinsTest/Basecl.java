@@ -7,18 +7,10 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.events.EventFiringDecorator;
-import org.openqa.selenium.support.events.WebDriverListener;
-
 import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
 
 
@@ -79,6 +71,7 @@ public class Basecl {
 		{
 			
 			driver= new ChromeDriver(options);
+		//	driver = WebDriverManager.Chrome(ChromeDriverManager().install())
 		
 		}
 			
