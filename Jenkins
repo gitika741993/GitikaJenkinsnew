@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('GitPipeline') {
+            steps {
+                git credentialsId: 'Git', url: 'https://github.com/gitika741993/GitikaJenkinsnew.git'
+            }
+        }
+       stage('build && SonarQube analysis') {
+            steps {
+              withSonarQubeEnv(credentialsId: 'ae331794-4ae4-49bd-b717-4f50b45b6aa3', installationName: 'Sonar Server') {
+               sh" ${SCANNER_HOME**}**}/bin/sonar-scanner \
+              -Dsonar.projectKey=simple_webapp \
+               -Dsonar.sources=. "
+                  }
+                }
+            }
+         
+        
+    }
+}
